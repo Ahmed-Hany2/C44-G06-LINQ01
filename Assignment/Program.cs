@@ -74,6 +74,14 @@ namespace Assignment
                 Value = value,
                 Match = value == index
             });
+
+            #region LINQ - Restriction Operators><
+            // 1. Find all products that are out of stock.
+            var outOfStock = products.Where(p => p.UnitsInStock == 0);
+
+
+
+            #endregion
         }
     }
 }
