@@ -136,6 +136,14 @@ namespace Assignment
                 Arr3.OrderBy(w => w.Length)
                     .ThenByDescending(w => w, StringComparer.OrdinalIgnoreCase);
 
+            // 6. Create a list of all digits in the array whose second letter is 'i' that is reversed from the order in the original array.
+
+            string[] digits = { "zero", "one", "two", "three", "four",
+                    "five", "six", "seven", "eight", "nine" };
+
+            var resultDigits =
+                digits.Where(w => w.Length > 1 && w[1] == 'i')
+                      .Reverse();
             #endregion
         }
     }
