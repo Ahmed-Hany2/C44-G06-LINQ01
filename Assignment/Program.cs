@@ -104,6 +104,16 @@ namespace Assignment
             var ordersAfter1998 =
                     orders.Where(o => o.OrderDate.Year >= 1998);
 
+            #endregion
+
+            #region LINQ - Ordering Operators
+
+            // 1.Sort a list of products by name
+            var sortedByName = products.OrderBy(p => p.ProductName);
+
+            
+
+
 
             #endregion
         }
