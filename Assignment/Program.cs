@@ -48,6 +48,25 @@ namespace Assignment
                 from b in numbersB
                 where a < b
                 select new { A = a, B = b };
+
+            //4. Select all orders where the order total is less than 500.00.
+            List<Order> orders = new List<Order>
+{
+    new Order { OrderID = 1, Customer = "Ahmed",   OrderDate = new DateTime(1996, 5, 12), Total = 450.00m },
+    new Order { OrderID = 2, Customer = "Hany",    OrderDate = new DateTime(1998, 1, 20), Total = 1200.00m },
+    new Order { OrderID = 3, Customer = "Omar",    OrderDate = new DateTime(1999, 3, 15), Total = 300.00m },
+    new Order { OrderID = 4, Customer = "Mona",    OrderDate = new DateTime(2000, 7, 8),  Total = 499.99m },
+    new Order { OrderID = 5, Customer = "Sara",    OrderDate = new DateTime(1997, 2, 3),  Total = 800.00m },
+    new Order { OrderID = 6, Customer = "Ali",     OrderDate = new DateTime(1998, 11, 11),Total = 50.00m },
+    new Order { OrderID = 7, Customer = "Nour",    OrderDate = new DateTime(1995, 9, 28), Total = 2000.00m },
+    new Order { OrderID = 8, Customer = "Mostafa", OrderDate = new DateTime(1999, 12, 1), Total = 230.00m }
+};
+            var smallOrders = orders.Where(o => o.Total < 500);
+
+
+
+
+
         }
-}
+    }
 }
