@@ -123,7 +123,10 @@ namespace Assignment
                 Arr2.OrderBy(w => w.Length)
                    .ThenBy(w => w);
 
-
+            //4. Sort a list of products, first by category, and then by unit price, from highest to lowest.
+            var sortedProducts =
+            products.OrderBy(p => p.Category)
+                    .ThenByDescending(p => p.UnitPrice);
 
             #endregion
         }
