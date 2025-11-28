@@ -101,6 +101,8 @@ namespace Assignment
                 });
 
             // 5.Select all orders where the order was made in 1998 or later.
+            var ordersAfter1998 =
+                    orders.Where(o => o.OrderDate.Year >= 1998);
 
 
             #endregion
