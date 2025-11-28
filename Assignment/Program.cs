@@ -79,6 +79,9 @@ namespace Assignment
             // 1. Find all products that are out of stock.
             var outOfStock = products.Where(p => p.UnitsInStock == 0);
 
+            // 2. Find all products that are in stock and cost more than 3.00 per unit.
+            var inStockAndExpensive =
+                products.Where(p => p.UnitsInStock > 0 && p.UnitPrice > 3.00m);
 
 
             #endregion
