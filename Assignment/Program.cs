@@ -83,6 +83,13 @@ namespace Assignment
             var inStockAndExpensive =
                 products.Where(p => p.UnitsInStock > 0 && p.UnitPrice > 3.00m);
 
+            //3.Returns Numbers whose Position is Match their value int[] Arr = {3,4,2,0,1,5,6};
+            int[] Arr1 = { 3, 4, 2, 0, 1, 5, 6 };
+
+            var resultMatch = Arr1
+                .Select((v, i) => new { Value = v, Index = i })
+                .Where(x => x.Value == x.Index);
+
 
             #endregion
         }
