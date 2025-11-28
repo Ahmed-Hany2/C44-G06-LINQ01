@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Diagnostics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assignment
 {
@@ -89,6 +90,15 @@ namespace Assignment
             var resultMatch = Arr1
                 .Select((v, i) => new { Value = v, Index = i })
                 .Where(x => x.Value == x.Index);
+
+            // 4.Produce a sequence containing some properties of Products, including UnitPrice which is renamed to Price in the result
+            var projected =
+                products.Select(p => new
+                {
+                    p.ProductID,
+                    p.ProductName,
+                    Price = p.UnitPrice
+                });
 
 
             #endregion
