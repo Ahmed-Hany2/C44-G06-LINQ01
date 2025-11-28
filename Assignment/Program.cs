@@ -64,9 +64,16 @@ namespace Assignment
             var smallOrders = orders.Where(o => o.Total < 500);
 
 
+            // 5- Determine if the value of int in an array match their position in the array.
 
+            int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
-
+            var matches = Arr.Select((value, index) => new
+            {
+                Index = index,
+                Value = value,
+                Match = value == index
+            });
         }
     }
 }
