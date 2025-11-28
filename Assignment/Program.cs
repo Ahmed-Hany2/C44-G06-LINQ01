@@ -115,6 +115,14 @@ namespace Assignment
             var sortedByStock =
                 products.OrderByDescending(p => p.UnitsInStock);
 
+            // 3. Sort a list of digits, first by length of their name, and then alphabetically by the name itself.
+            string[] Arr2 = { "zero", "one", "two", "three", "four",
+                 "five", "six", "seven", "eight", "nine" };
+
+            var sortedDigits =
+                Arr2.OrderBy(w => w.Length)
+                   .ThenBy(w => w);
+
 
 
             #endregion
