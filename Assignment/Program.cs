@@ -111,7 +111,9 @@ namespace Assignment
             // 1.Sort a list of products by name
             var sortedByName = products.OrderBy(p => p.ProductName);
 
-            
+            // 2. Sort a list of products by units in stock from highest to lowest.
+            var sortedByStock =
+                products.OrderByDescending(p => p.UnitsInStock);
 
 
 
