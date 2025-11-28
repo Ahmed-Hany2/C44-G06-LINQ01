@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assignment
@@ -127,6 +128,13 @@ namespace Assignment
             var sortedProducts =
             products.OrderBy(p => p.Category)
                     .ThenByDescending(p => p.UnitPrice);
+
+            // 5. Sort first by-word length and then by a case-insensitive descending sort of the words in an array.
+            string[] Arr3 = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
+            var sortedWords =
+                Arr3.OrderBy(w => w.Length)
+                    .ThenByDescending(w => w, StringComparer.OrdinalIgnoreCase);
 
             #endregion
         }
